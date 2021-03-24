@@ -8,6 +8,10 @@ const port = 800;
 
 app.use('/', require('./routes/index'));
 
+//Set Up The View Engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 
 
 app.listen(port, function(err){
