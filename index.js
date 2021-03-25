@@ -6,6 +6,10 @@ const port = 800;
 
 const expressLayouts = require('express-ejs-layouts');
 
+//When I start my server, it will require all these things. While requiring my Mongoose file, it will go and run mongoose.js part
+
+const db = require('./config/mongoose');
+
 //In which folder should the app lookout for Static files
 
 app.use(express.static('./assets'));
