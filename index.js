@@ -1,5 +1,7 @@
 const express = require('express');
 
+const cookieParser = require('cookie-parser');
+
 const app = express();
 
 const port = 800;
@@ -9,6 +11,10 @@ const expressLayouts = require('express-ejs-layouts');
 //When I start my server, it will require all these things. While requiring my Mongoose file, it will go and run mongoose.js part
 
 const db = require('./config/mongoose');
+
+app.use(express.urlencoded());
+
+app.use(cookieParser());
 
 //In which folder should the app lookout for Static files
 
