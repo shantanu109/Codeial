@@ -4,7 +4,7 @@ const Post = require('../models/post');
 const User = require('../models/user');
 
 
-module.exports.home = function(req,res){
+module.exports.home = async function(req,res){
     //return res.end('<h1>Express is up for codeial</h1>');
 
     // console.log(req.cookies);
@@ -21,26 +21,35 @@ module.exports.home = function(req,res){
 
     //Populate the user of each post
 
-    Post.find({})
-    .populate('user')
-    .populate({
-        path: 'comments',
-        populate: {
-            path: 'user'
-        }
-    })
-    .exec(function(err,posts){
+    //The successful response will be stored in posts
 
-        User.find({}, function(err,users){
+    try{
 
-            return res.render('home', {
-                title: "Codeial | Home",
-                posts: posts,
-                all_users: users
-            });
-
+        let posts = await Post.find({})
+        .populate('user')
+        .populate({
+            path: 'comments',
+            populate: {
+                path: 'user'
+            }
         });
 
-    });
+        //The successful response will be stored in users
 
+        let users = await User.find({});
+
+        return res.render('home', {
+            title: "Codeial | Home",
+            posts: posts,
+            all_users: users
+        });
+
+    }catch(err){
+
+        console.log('Error', err);
+        return;
+
+    }
+
+    
 } 
