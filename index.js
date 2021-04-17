@@ -48,6 +48,10 @@ app.use(cookieParser());
 
 app.use(express.static('./assets'));
 
+// make the uploads path available to the browser
+// codeial/uploads is available on /uploads path now
+app.use('/uploads',express.static(__dirname + '/uploads'));
+
 app.use(expressLayouts);
 
 //Extract style and scripts from sub pages into the layout

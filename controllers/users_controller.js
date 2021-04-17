@@ -2,6 +2,10 @@
 
 const User = require('../models/user');
 
+const fs = require('fs');
+
+const path = require('path');
+
 module.exports.profile = function(req,res){
 
     User.findById(req.params.id,function(err,user){
@@ -17,19 +21,69 @@ module.exports.profile = function(req,res){
 
 //Update Action
 
-module.exports.update =  function(req,res){
+module.exports.update =  async function(req,res){
+
+    // if (req.user.id == req.params.id){
+
+    //     //User which has been updated
+
+    //     User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+    //         return res.redirect('back');
+
+    //     });
+    // } else {
+    //     return res.status(401).send('Unauthorized');
+    // }
 
     if (req.user.id == req.params.id){
 
-        //User which has been updated
+        try{
 
-        User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+            let user = await User.findById(req.params.id);
+            User.uploadedAvatar(req,res,function(err){
+
+                if (err){
+                    console.log('********Multer Error', err);
+                }
+
+                //I wouldn't have been able to read body without multer because my form is multipart
+
+                user.name = req.body.name;
+                user.email = req.body.email;
+
+                if (req.file){
+
+                    if (user.avatar){
+
+                        fs.unlinkSync(path.join(__dirname, '..', user.avatar));
+
+
+                    }
+                    //This is saving the path of the uploaded file into the avatar field in the user
+                    //user.avatar = current user
+
+                    user.avatar = User.avatarPath + '/' + req.file.filename;
+                }
+
+                user.save();
+                return res.redirect('back');
+
+
+            });
+
+
+        }catch(err){
+            req.flash('error',err);
             return res.redirect('back');
+        }
 
-        });
-    } else {
+    }else{
+        req.flash('error','Unauthorized');
         return res.status(401).send('Unauthorized');
+
     }
+
+
 }
 
 //Render the Sign Up Page
@@ -52,7 +106,7 @@ module.exports.signUp = function(req,res){
 module.exports.signIn = function(req,res){
 
     if (req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/users/profile/user.id');
     }
 
     return res.render('user_sign_in', {
