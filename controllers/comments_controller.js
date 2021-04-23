@@ -2,6 +2,8 @@ const Comment = require('../models/comment');
 
 const Post = require('../models/post');
 
+const commentsMailer = require('../mailers/comments_mailer');
+
 module.exports.create = async function(req,res){
 
     //Find the post with that POST Id first and then create a comment
@@ -24,6 +26,25 @@ module.exports.create = async function(req,res){
             post.comments.push(comment);
             post.save();  //Whenever I'm updating something, you'll have to Save it
 
+            comment = await comment.populate('user', 'name email').execPopulate();
+
+            commentsMailer.newComment(comment);
+
+            if (req.xhr){
+                //Similar for comments to fetch the user's id
+
+                
+
+                return res.status(200).json({
+                    data: {
+                        comment: comment
+                    },
+                    message: 'Post Created'
+                });
+            }
+
+            req.flash('success', 'Comment published');
+
             res.redirect('/');
 
             }
@@ -31,6 +52,7 @@ module.exports.create = async function(req,res){
     }catch(err){
 
         console.log('Error',err);
+        req.flash('error',err);
         return;
     }
 
