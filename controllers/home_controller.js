@@ -23,6 +23,8 @@ module.exports.home = async function(req,res){
 
     //The successful response will be stored in posts
 
+    //Populate the likes of each post and comment
+
     try{
 
         let posts = await Post.find({})
@@ -32,8 +34,11 @@ module.exports.home = async function(req,res){
             path: 'comments',
             populate: {
                 path: 'user'
+            },
+            poplulate: {
+                path: 'likes'
             }
-        });
+        }).populate('likes');
 
         //The successful response will be stored in users
 

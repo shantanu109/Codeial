@@ -7,6 +7,8 @@ const commentsMailer = require('../mailers/comments_mailer');
 const commentEmailWorker = require('../workers/comment_email_worker');
 const queue = require('../config/kue');
 
+const Like = require('../models/like');
+
 module.exports.create = async function(req,res){
 
     //Find the post with that POST Id first and then create a comment
@@ -93,6 +95,10 @@ module.exports.destroy = async function(req,res){
                 //Id which I need to pull out from comments
 
             let post = Post.findByIdAndUpdate(postId, { $pull: {comments: req.params.id}});
+
+            //Destroy the associated likes for this comment
+
+            await Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
                 
             return res.redirect('back');
                 
