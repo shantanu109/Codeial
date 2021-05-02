@@ -69,6 +69,9 @@
         <% } %>
     
     </section>
+
+    <%- include('_chat_box') -%>
+
     
 
 
@@ -88,6 +91,21 @@
         let toggleLike = new ToggleLike(self);
     });
 </script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js'>
+</script>
+
+<script src="/js/chat_engine.js"></script>
+
+
+<!--Inintialize the class-->
+
+<% if (locals.user) { %>
+<script>
+    new ChatEngine('user-chat-box', '<%= locals.user.email %>');
+</script>
+
+<% } %>
 
 
 
