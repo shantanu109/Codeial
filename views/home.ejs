@@ -17,7 +17,7 @@
     </body>
 </html> -->
 
-<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="<%= assetPath('css/home.css') %>">
 
 <div id = "home-container">
 
@@ -77,11 +77,11 @@
 
 </div>
 
-<script src="/js/home_posts.js"></script>
+<script src="<%= assetPath('js/home_posts.js') %>"></script>
 
 
 <!--Import the script file for toggle likes, also run it over for the already present posts and comments on the page-->
-<script src="js/toggle_likes.js">
+<script src="<%= assetPath('js/toggle_likes.js') %>">
     
 </script>
 
@@ -95,7 +95,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js'>
 </script>
 
-<script src="/js/chat_engine.js"></script>
+<script src="<%= assetPath('js/chat_engine.js') %>"></script>
 
 
 <!--Inintialize the class-->

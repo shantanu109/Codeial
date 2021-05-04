@@ -1,5 +1,6 @@
 const passport = require('passport');
 
+
 //Importing the strategy
 
 const JWTStrategy = require('passport-jwt').Strategy;
@@ -12,11 +13,13 @@ const ExtractJWT = require('passport-jwt').ExtractJwt;
 
 const User = require('../models/user');
 
+const env = require('./environment');
+
 let opts = {
     //Header -> key Authorization(list of keys) -> key Bearer has JWT token
 
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey : 'codeial'
+    secretOrKey : env.jwt_secret
 }
 
 //Here we donot need to match the password, because we are matching the JWT thing

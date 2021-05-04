@@ -1,8 +1,15 @@
 const express = require('express');
 
+const env = require('./config/environment');
+
+const logger = require('morgan');
+
+
 const cookieParser = require('cookie-parser');
 
 const app = express();
+
+require('./config/view-helpers')(app);
 
 const port = 800;
 
@@ -49,15 +56,22 @@ chatServer.listen(5000);
 
 console.log('Chat Server is listening on Port 5000');
 
+const path = require('path');
 
+//In the production mode, it shouldn't be running sassMiddleware everytime
 
-app.use(sassMiddleware({
-    src: './assets/scss',
-    dest: './assets/css',
-    debug: true,
-    outputStyle: 'extended',
-    prefix: '/css'
-}));
+if (env.name == 'development'){
+
+    app.use(sassMiddleware({
+        src: path.join(__dirname,env.asset_path,'scss'),
+        dest: path.join(__dirname,env.asset_path,'css'),
+        debug: true,
+        outputStyle: 'extended',
+        prefix: '/css'
+    }));
+
+}
+
 
 app.use(express.urlencoded());
 
@@ -65,11 +79,13 @@ app.use(cookieParser());
 
 //In which folder should the app lookout for Static files
 
-app.use(express.static('./assets'));
+app.use(express.static(env.asset_path));
 
 // make the uploads path available to the browser
 // codeial/uploads is available on /uploads path now
 app.use('/uploads',express.static(__dirname + '/uploads'));
+
+app.use(logger(env.morgan.mode, env.morgan.options));
 
 app.use(expressLayouts);
 
@@ -91,7 +107,7 @@ app.set('views', './views');
 app.use(session({
     name: 'codeial',
     //ToDo Change the secret before deployment in production mode
-    secret: 'blahsomething',
+    secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
