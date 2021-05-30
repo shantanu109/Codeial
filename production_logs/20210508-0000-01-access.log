@@ -1,0 +1,157 @@
+::1 - - [03/May/2021:12:53:24 +0000] "GET / HTTP/1.1" 200 2761 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [03/May/2021:12:54:02 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [03/May/2021:12:54:10 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [03/May/2021:12:54:11 +0000] "GET / HTTP/1.1" 200 4084 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [03/May/2021:12:54:19 +0000] "GET /users/profile/608fd9e2adbfe40e2d12e0bd HTTP/1.1" 304 - "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [03/May/2021:12:54:46 +0000] "GET /users/sign-out HTTP/1.1" 302 46 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [03/May/2021:12:54:46 +0000] "GET / HTTP/1.1" 200 3044 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:23 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:25 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:25 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:26 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:27 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:27 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:28 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:28 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:30 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:800/users/profile/608fd9e2adbfe40e2d12e0bd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:53:35 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET / HTTP/1.1" 200 2772 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /css/header.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /css/footer.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /css/header.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:55:55 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:56:04 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:56:04 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:56:04 +0000] "GET /css/footer.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:56:04 +0000] "GET /css/header.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /css/header.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /css/footer.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:10:57:16 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /css/footer.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /css/header.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:14 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /css/header.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /css/chat_box.css HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /css/footer.css HTTP/1.1" 404 153 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:02:35 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET / HTTP/1.1" 200 2806 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:44 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:04:59 +0000] "GET /users/sign-in HTTP/1.1" 200 1531 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:01 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "GET / HTTP/1.1" 200 4129 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "GET /css/home.css HTTP/1.1" 404 151 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:05:23 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:06:25 +0000] "GET / HTTP/1.1" 200 3854 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:06:25 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:06:25 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:06:25 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+[0mGET / [32m200[0m 197.817 ms - 24743[0m
+[0mGET /users/sign-in [32m200[0m 32.732 ms - 1483[0m
+[0mGET /users/css/layout.css [33m404[0m 56.007 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 75.386 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 120.581 ms - 159[0m
+[0mGET /users/css/chat_box.css [33m404[0m 136.117 ms - 161[0m
+[0mGET /users/auth/google [36m302[0m 27.461 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AY0e-g6wuNGXOf5Ah6Sdt4Q5CHWHk5Wdb2uqdB0DPutN7MfsrVLMUXAnlytA4CdfR5a90Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 566.815 ms - 46[0m
+[0mGET / [32m200[0m 158.949 ms - 38336[0m
+::1 - - [04/May/2021:11:07:58 +0000] "GET / HTTP/1.1" 200 2817 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:07:59 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:07:59 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:07:59 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:09:57 +0000] "GET / HTTP/1.1" 200 2809 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:09:57 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:09:57 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:09:57 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:09:57 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:00 +0000] "GET /users/sign-in HTTP/1.1" 200 1531 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:08 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:08 +0000] "GET / HTTP/1.1" 200 4132 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:08 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:09 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:09 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:09 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:47 +0000] "GET / HTTP/1.1" 200 3846 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:48 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:48 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:48 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:11:10:48 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:36 +0000] "GET / HTTP/1.1" 200 2829 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:36 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:36 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:37 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:45 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:45 +0000] "GET / HTTP/1.1" 200 4152 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:45 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:10:45 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:11:59 +0000] "GET / HTTP/1.1" 200 3851 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:11:59 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:12:00 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:12:49 +0000] "GET / HTTP/1.1" 200 3888 "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:15:04 +0000] "GET / HTTP/1.1" 304 - "http://localhost:800/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:15:32 +0000] "GET /users/sign-out HTTP/1.1" 302 46 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+::1 - - [04/May/2021:14:15:32 +0000] "GET / HTTP/1.1" 200 3134 "http://localhost:800/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
+[0mGET /api/v1/posts [32m200[0m 119.566 ms - 15316[0m
+[0mGET / [32m200[0m 440.241 ms - 24741[0m
+[0mGET /users/sign-in [32m200[0m 23.402 ms - 1483[0m
+[0mGET /users/css/header.css [33m404[0m 62.791 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 65.339 ms - 159[0m
+[0mGET /users/css/layout.css [33m404[0m 91.111 ms - 159[0m
+[0mGET /users/css/chat_box.css [33m404[0m 103.354 ms - 161[0m
+[0mGET /users/auth/google [36m302[0m 26.660 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AY0e-g6Sub9MlUL5qTnnD2Z903dvPWn_VcKDoq6jimJHP2cUsP_xso5oF6NhaXqi-Zy0ZA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 527.785 ms - 46[0m
+[0mGET / [32m200[0m 102.932 ms - 38334[0m
+[0mGET /users/profile/607f28eb80432ee706771686 [32m200[0m 18.152 ms - 2353[0m
+[0mGET /users/profile/css/layout.css [33m404[0m 52.595 ms - 167[0m
+[0mGET /users/profile/css/header.css [33m404[0m 60.401 ms - 167[0m
+[0mGET /users/profile/css/footer.css [33m404[0m 62.037 ms - 167[0m
+[0mGET /users/profile/css/chat_box.css [33m404[0m 63.359 ms - 169[0m
+[0mGET /users/sign-out [36m302[0m 12.469 ms - 46[0m
+[0mGET / [32m200[0m 91.551 ms - 25024[0m
+[0mGET /api/v1/posts [36m304[0m 69.403 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 50.493 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 101.851 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 36.388 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 123.848 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 60.024 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 28.203 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 24.618 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 22.769 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 28.381 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 55.937 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 44.713 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 21.133 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 38.548 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 45.813 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 49.110 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 93.757 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 27.846 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 91.777 ms - -[0m
+[0mGET /api/v1/posts [36m304[0m 75.308 ms - -[0m

@@ -14,6 +14,8 @@ router.get('/',postsApi.index);
 
 router.delete('/:id',passport.authenticate('jwt', {session: false}) , postsApi.destroy);
 
+router.post('/create',postsApi.createPost)
+
 
 
 

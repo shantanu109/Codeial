@@ -63,3 +63,53 @@ module.exports.destroy = async function(req,res){
     }
   
 }
+
+module.exports.createPost = async function(req,res){
+
+    try {
+        let post = await Post.create({
+            content: req.body.content,
+            user: req.body.id
+        });
+
+        // let posts = await Post.find({})
+        // .sort('-createdAt')
+        // .populate('user')
+        // .populate({
+        //     path: 'comments',
+        //     populate: {
+        //         path: 'user'
+        //     }
+        // });
+
+        
+        // return res.json(200, {
+        //     message: "Post Created",
+      
+        //     data: {
+        //       //user.JSON() part gets encrypted
+      
+        //       token: jwt.sign(user.toJSON(), env.jwt_secret, { expiresIn: "100000" }),
+        //       post: post,
+        //     },
+        //     success: true,
+        //   });
+        return res.json(200,{
+            data:{
+                post : post,
+                //token: jwt.sign(user.toJSON(), env.jwt_secret, { expiresIn: "100000" })
+            },
+            message: "Post Created!!",
+            success:true
+        });
+    }catch(err){
+        console.log(err);
+        
+        return res.json(500, {
+            message: 'NOT CREATED'
+        });
+
+    }
+   
+}
+
