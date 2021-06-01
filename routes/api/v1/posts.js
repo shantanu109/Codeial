@@ -7,6 +7,10 @@ const passport = require('passport');
 const postsApi = require('../../../controllers/api/v1/posts_api');
 
 
+
+
+
+
 router.get('/',postsApi.index);
 
 //This will delete the post as it is a 'delete' request
@@ -17,6 +21,10 @@ router.delete('/:id',passport.authenticate('jwt', {session: false}) , postsApi.d
 router.post('/create',postsApi.createPost);
 
 router.post('/createComment',postsApi.createComment);
+
+router.post('/toggleLike',postsApi.toggleLike);
+
+
 
 
 
