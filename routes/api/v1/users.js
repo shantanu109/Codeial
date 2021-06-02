@@ -14,6 +14,8 @@ router.post('/edit', usersApi.editProfile);
 
 router.get('/:userId', usersApi.profile);
 
+router.get('/search/:name', usersApi.searchUser);
+
 
 
 
