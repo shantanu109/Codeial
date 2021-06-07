@@ -16,6 +16,12 @@ router.get('/:userId', usersApi.profile);
 
 router.get('/search/:name', usersApi.searchUser);
 
+//router.get('/:email',usersApi.fetchFriends);
+
+router.post('/create-friendship/:userId', usersApi.createFriendship);
+
+
+
 
 
 

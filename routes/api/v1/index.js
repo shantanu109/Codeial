@@ -7,7 +7,7 @@ router.use('/posts',require('./posts'));
 
 router.use('/users',require('./users'));
 
-//router.use('/friendship',require('./friendship'))
+router.use('/friendship',require('./friendship'))
 
 
 

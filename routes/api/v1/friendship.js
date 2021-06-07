@@ -1,16 +1,13 @@
-// const express = require('express');
+const express = require('express');
 
-// const router = express.Router();
+const router = express.Router();
 
-// const usersApi = require('../../../controllers/api/v1/users_api');
-
-
-// router.post('/create-friendship?userId', usersApi.createFriendship);
-
-// router.post('/remove-friendship/:userId', usersApi.removeFriendship);
-
-// router.get('/fetch-friends', usersApi.fetchFriends);
+const usersApi = require('../../../controllers/api/v1/users_api');
 
 
 
-// module.exports = router; 
+router.get('/:userId',usersApi.fetchFriends)
+
+
+
+module.exports = router; 

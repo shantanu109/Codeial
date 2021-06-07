@@ -1,0 +1,16 @@
+[0mGET /api/v1/friendship/60bbeb29fe644d09f75af646 [32m200[0m 401.660 ms - 1048[0m
+[0mGET /api/v1/posts?page=1&limit=25 [36m304[0m 1504.845 ms - -[0m
+[0mPOST /api/v1/posts/toggleLike?likeable_id=60b496ffcde5398fd748b774&likeable_type=Post [32m200[0m 211.730 ms - 311[0m
+[0mPOST /api/v1/posts/toggleLike?likeable_id=60b496ffcde5398fd748b774&likeable_type=Post [32m200[0m 16.910 ms - 276[0m
+[0mGET /api/v1/users/search/k [32m200[0m 26.423 ms - 285[0m
+[0mGET /api/v1/users/search/ka [32m200[0m 5.921 ms - 285[0m
+[0mGET /api/v1/users/search/k [36m304[0m 5.013 ms - -[0m
+[0mGET /api/v1/users/search/ [31m500[0m 24.348 ms - 35[0m
+[0mGET /api/v1/users/search/s [32m200[0m 17.904 ms - 4579[0m
+[0mGET /api/v1/users/search/sh [32m200[0m 12.593 ms - 4187[0m
+[0mGET /api/v1/users/search/sha [32m200[0m 10.569 ms - 4187[0m
+[0mGET /api/v1/users/search/shan [32m200[0m 8.793 ms - 2681[0m
+[0mGET /api/v1/users/search/sha [36m304[0m 10.103 ms - -[0m
+[0mGET /api/v1/users/search/sh [36m304[0m 11.754 ms - -[0m
+[0mGET /api/v1/users/search/s [36m304[0m 13.827 ms - -[0m
+[0mGET /api/v1/users/search/ [31m500[0m 10.009 ms - 35[0m
