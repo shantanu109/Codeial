@@ -157,8 +157,7 @@ module.exports.profile = async function (req, res) {
 module.exports.createFriendship = async function (req, res) {
   try {
     let user = await User.findOne({_id:req.body.id});
-    //let user2 = await User.findById(req.query.userId);
-    
+  
 
     if (user) {
       let friend = await Friendship.create({
@@ -169,18 +168,24 @@ module.exports.createFriendship = async function (req, res) {
       user.friendships.push(friend);
 
       user.save();
+
+      toSend = []
+
+      let i;
+      check = user.friendships
+      for (i=0; i<check.length; i++){
+
+        let friendFinder = await Friendship.findOne({_id: check[i]})
+        let friendToUser = friendFinder.to_user
+
+        let userMapped = await User.findOne({_id: friendToUser})
+
+        let toAdd = {_id: userMapped._id, email: userMapped.email, name: userMapped.name};
+
+        toSend.push(toAdd)
+      }
+
     
-    // if (user2) {
-    //   let friend2 = await Friendship.create({
-    //     from_user: user2._id,
-    //     to_user: {_id: user._id, email:user.email, name:user.name},
-    //   });
-
-    //   user2.friendships.push(friend2);
-
-    //   user2.save();
-    // }
-
       return res.json(200, {
         message: "Friendship created successfully",
 
@@ -188,13 +193,14 @@ module.exports.createFriendship = async function (req, res) {
           //user.JSON() part gets encrypted
 
           token: jwt.sign(user.toJSON(), env.jwt_secret, { expiresIn: "100000" }),
-          friendship: user.friendships,
+          friends: toSend,
         },
         success: true,
+        
       });
     }else {
       return res.json(500, {
-        message: "NHI MILA USER",
+        message: "NHI BANA FRIEND",
       });
     }
 
@@ -207,49 +213,12 @@ module.exports.createFriendship = async function (req, res) {
   }
 };
 
-// module.exports.removeFriendship = async function (req, res) {
-//   try {
-//     let user = await Friendship.findById(req.body.id);
-//     let user2 = await Friendship.findById(req.params.id);
 
-//     if (user.from_user == req.body.id) {
-//       let frienshipUser = user.from_user;
-
-//       user.remove();
-
-//       let userDeleted = User.findByIdAndUpdate(friendshipUser, {
-//         $pull: { friendships: req.params.userId },
-//       });
-//     }
-
-//     if (user2.from_user == req.params.userId) {
-//       let friendshipUser = user2.from_user;
-
-//       user2.remove();
-
-//       let userDeleted = User.findByIdAndUpdate(friendshipUser, {
-//         $pull: { friendships: req.body.id },
-//       });
-//     }
-
-//     return res.json(200, {
-//       message: "Friends removed",
-
-//       success: true,
-//     });
-//   } catch (err) {
-//     console.log(err);
-
-//     return res.json(500, {
-//       message: "Internal Server Error",
-//     });
-//   }
-// };
 
 module.exports.fetchFriends = async function (req, res) {
   try {
     let user = await User.findOne({_id:req.params.userId});
-    
+
     toSend = []
 
     let i;
