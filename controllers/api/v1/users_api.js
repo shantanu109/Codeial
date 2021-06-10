@@ -290,3 +290,62 @@ module.exports.searchUser = async function (req, res){
   }
 
 }
+
+module.exports.removeFriendship = async function (req, res) {
+  try {
+    let friendCheck = await Friendship.findOne({from_user:req.body.id, to_user:req.params.userId});
+    let friendId = friendCheck._id;
+
+    friendCheck.remove();
+
+    let user = await User.findOne({_id:req.body.id})
+  
+    if (user) {
+      
+      user.friendships.pull(friendId);
+      user.save();
+      
+
+      toSend = []
+
+      let i;
+      check = user.friendships
+      for (i=0; i<check.length; i++){
+
+        let friendFinder = await Friendship.findOne({_id: check[i]})
+        let friendToUser = friendFinder.to_user
+
+        let userMapped = await User.findOne({_id: friendToUser})
+
+        let toAdd = {_id: userMapped._id, email: userMapped.email, name: userMapped.name};
+
+        toSend.push(toAdd)
+      }
+
+    
+      return res.json(200, {
+        message: "Friendship created successfully",
+
+        data: {
+          //user.JSON() part gets encrypted
+
+          token: jwt.sign(user.toJSON(), env.jwt_secret, { expiresIn: "100000" }),
+          friends: toSend,
+        },
+        success: true,
+        
+      });
+    }else {
+      return res.json(500, {
+        message: "NHI BANA FRIEND",
+      });
+    }
+
+  } catch (err) {
+    console.log(err);
+
+    return res.json(500, {
+      message: "Internal Server Error",
+    });
+  }
+};

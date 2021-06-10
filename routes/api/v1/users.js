@@ -20,7 +20,7 @@ router.get('/search/:name', usersApi.searchUser);
 
 router.post('/create-friendship/:userId', usersApi.createFriendship);
 
-//router.post('/remove-friendship/:userId', usersApi.removeFriendship);
+router.post('/remove-friendship/:userId', usersApi.removeFriendship);
 
 
 

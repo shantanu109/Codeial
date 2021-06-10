@@ -1,4 +1,5 @@
 const Post = require("../../../models/post");
+const User = require("../../../models/user");
 
 const Comment = require("../../../models/comment");
 
@@ -62,10 +63,11 @@ module.exports.destroy = async function (req, res) {
 };
 
 module.exports.createPost = async function (req, res) {
+  let user = await User.findOne({_id: req.body.id})
   try {
     let post = await Post.create({
       content: req.body.content,
-      user: req.body.id,
+      user: user,
     });
 
     // let posts = await Post.find({})
