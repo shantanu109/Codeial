@@ -24,6 +24,8 @@ router.post('/createComment',postsApi.createComment);
 
 router.post('/toggleLike',postsApi.toggleLike);
 
+router.post('/destroy/:postId',postsApi.destroy);
+
 
 
 

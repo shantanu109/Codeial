@@ -34,19 +34,30 @@ module.exports.destroy = async function (req, res) {
   try {
     //Saving the post found from the database into post
 
-    let post = await Post.findById(req.params.id);
+    let post = await Post.findById(req.params.postId);
 
     //.id means converting the object Id into string
 
-    if (post.user == req.user.id) {
+    if (post.user == req.body.id) {
       post.remove();
 
-      await Comment.deleteMany({ post: req.params.id });
+      await Comment.deleteMany({ post: req.params.postId });
 
       //We changed 'redirect' with sending back 'JSON'
+      let posts = await Post.find({})
+      .sort("-createdAt")
+      .populate("user")
+      .populate({
+        path: "comments",
+        populate: {
+          path: "user",
+        },
+      });
 
       return res.json(200, {
         message: "Post and associated comments deleted successfully",
+        posts: posts,
+        success:true
       });
     } else {
       return res.json(401, {
