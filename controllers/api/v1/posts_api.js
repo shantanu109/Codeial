@@ -73,6 +73,54 @@ module.exports.destroy = async function (req, res) {
   }
 };
 
+module.exports.destroyComment = async function (req, res) {
+  try {
+    //Saving the post found from the database into post
+
+    let comment = await Comment.findById(req.params.commentId);
+
+    //.id means converting the object Id into string
+
+    if (comment.user == req.body.id){
+      let postId = comment.post;
+
+      comment.remove();
+
+      let post = Post.findByIdAndUpdate(postId, { $pull: {comments: req.params.commentId}});
+
+      await Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
+
+      //We changed 'redirect' with sending back 'JSON'
+      let posts = await Post.find({})
+      .sort("-createdAt")
+      .populate("user")
+      .populate({
+        path: "comments",
+        populate: {
+          path: "user",
+        },
+      });
+
+      return res.json(200, {
+        message: "Post and associated comments deleted successfully",
+        posts: posts,
+        success:true
+      });
+    } else {
+      return res.json(401, {
+        message: "You cannot delete this post!",
+      });
+    }
+  } catch (err) {
+    console.log(err);
+
+    return res.json(500, {
+      message: "Internal Server Error",
+    });
+  }
+};
+
+
 module.exports.createPost = async function (req, res) {
   let user = await User.findOne({_id: req.body.id})
   try {
