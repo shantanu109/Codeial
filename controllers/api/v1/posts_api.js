@@ -16,6 +16,7 @@ module.exports.index = async function (req, res) {
     .populate("user")
     .populate({
       path: "comments",
+      options:{sort:{'createdAt':-1}},
       populate: {
         path: "user",
       },
@@ -45,19 +46,20 @@ module.exports.destroy = async function (req, res) {
 
       //We changed 'redirect' with sending back 'JSON'
       let posts = await Post.find({})
-      .sort("-createdAt")
-      .populate("user")
-      .populate({
-        path: "comments",
-        populate: {
-          path: "user",
-        },
-      });
+        .sort("-createdAt")
+        .populate("user")
+        .populate({
+          path: "comments",
+          options:{sort:{'createdAt':-1}},
+          populate: {
+            path: "user",
+          },
+        });
 
       return res.json(200, {
         message: "Post and associated comments deleted successfully",
         posts: posts,
-        success:true
+        success: true,
       });
     } else {
       return res.json(401, {
@@ -81,30 +83,33 @@ module.exports.destroyComment = async function (req, res) {
 
     //.id means converting the object Id into string
 
-    if (comment.user == req.body.id){
+    if (comment.user == req.body.id) {
       let postId = comment.post;
 
       comment.remove();
 
-      let post = Post.findByIdAndUpdate(postId, { $pull: {comments: req.params.commentId}});
+      let post = Post.findByIdAndUpdate(postId, {
+        $pull: { comments: req.params.commentId },
+      });
 
-      await Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
+      await Like.deleteMany({ likeable: comment._id, onModel: "Comment" });
 
       //We changed 'redirect' with sending back 'JSON'
       let posts = await Post.find({})
-      .sort("-createdAt")
-      .populate("user")
-      .populate({
-        path: "comments",
-        populate: {
-          path: "user",
-        },
-      });
+        .sort("-createdAt")
+        .populate("user")
+        .populate({
+          path: "comments",
+          options:{sort:{'createdAt':-1}},
+          populate: {
+            path: "user",
+          },
+        });
 
       return res.json(200, {
         message: "Post and associated comments deleted successfully",
         posts: posts,
-        success:true
+        success: true,
       });
     } else {
       return res.json(401, {
@@ -120,9 +125,8 @@ module.exports.destroyComment = async function (req, res) {
   }
 };
 
-
 module.exports.createPost = async function (req, res) {
-  let user = await User.findOne({_id: req.body.id})
+  let user = await User.findOne({ _id: req.body.id });
   try {
     let post = await Post.create({
       content: req.body.content,
@@ -243,13 +247,11 @@ module.exports.toggleLike = async function (req, res) {
     //If a like already exists, then delete it
 
     if (existingLike) {
-      
       likeable.likes.pull(existingLike._id);
       likeable.save();
-      
+
       existingLike.remove();
-      deleted = true
-      
+      deleted = true;
     } else {
       //make a new like
 
@@ -261,6 +263,27 @@ module.exports.toggleLike = async function (req, res) {
 
       likeable.likes.push(newLike._id);
       likeable.save();
+    }
+
+    if (req.query.likeable_type == "Comment") {
+      let posts = await Post.find({})
+        .sort("-createdAt")
+        .populate("user")
+        .populate({
+          path: "comments",
+          options:{sort:{'createdAt':-1}},
+          populate: {
+            path: "user",
+          },
+        });
+      
+      return res.json(200, {
+        message: "Request Successful",
+
+        posts: posts,
+
+        success: true,
+      });
     }
 
     return res.json(200, {
