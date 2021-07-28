@@ -11,7 +11,7 @@ const app = express();
 
 require('./config/view-helpers')(app);
 
-const port = 800;
+const port = process.env.PORT || 3000;
 
 const expressLayouts = require('express-ejs-layouts');
 
