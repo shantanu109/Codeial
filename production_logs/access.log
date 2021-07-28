@@ -32,3 +32,7 @@
 [0mPOST /api/v1/posts/toggleLike?likeable_id=6101920aa9d66217cc115a5d&likeable_type=Post [32m200[0m 9.173 ms - 101[0m
 [0mPOST /api/v1/posts/toggleLike?likeable_id=6101920aa9d66217cc115a5d&likeable_type=Post [32m200[0m 10.445 ms - 67[0m
 [0mPOST /api/v1/posts/destroy/6101920aa9d66217cc115a5d [32m200[0m 26.716 ms - 5978[0m
+::1 - - [28/Jul/2021:18:43:34 +0000] "GET / HTTP/1.1" 200 2851 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15"
+::1 - - [28/Jul/2021:18:43:34 +0000] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 171 "-" "Safari/15610.1.28.1.9 CFNetwork/1128.0.1 Darwin/19.6.0 (x86_64)"
+::1 - - [28/Jul/2021:18:43:34 +0000] "GET /apple-touch-icon.png HTTP/1.1" 404 159 "-" "Safari/15610.1.28.1.9 CFNetwork/1128.0.1 Darwin/19.6.0 (x86_64)"
+::1 - - [28/Jul/2021:18:43:34 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15"
