@@ -4,7 +4,8 @@
   "description": "My all social media web application.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod_start": "NODE_ENV=production nodemon index.js"
   },
@@ -45,5 +46,8 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-uglify-es": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
