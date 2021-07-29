@@ -2,11 +2,11 @@
   "name": "codeial",
   "version": "1.0.0",
   "description": "My all social media web application.",
-  "main": "server.js",
+  "main": "/home/ubuntu/Codeial/server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod_start": "NODE_ENV=production nodemon server.js"
+    "prod_start": "NODE_ENV=production nodemon /home/ubuntu/Codeial/server.js"
   },
   "keywords": [
     "social"
