@@ -139,8 +139,7 @@ app.use(customMware.setFlash);
 
 //Use express router
 
-// app.use('/', require('./routes/index'));
- app.use('/', require('/home/ubuntu/Codeial/routes/index.js'))
+app.use('/', require('./routes/index'));
 
 app.use(express.static(__dirname + '/public'));
 
