@@ -5,7 +5,7 @@ const Friendship = require("../../../models/friendship");
 const jwt = require("jsonwebtoken");
 
 const env = require("../../../config/environment");
-const { FriendsList } = require("../../../../codeial-final-live/src/components/index.js");
+
 
 module.exports.createSession = async function (req, res) {
   //Whenever a username and password is received, we need to find that user and generate JWT corresponding to that user
