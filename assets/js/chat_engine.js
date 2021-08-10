@@ -10,7 +10,7 @@ class ChatEngine{
 
         //We are sending the connect request and calling the connection handler
 
-        this.socket = io.connect('http://localhost:5000');
+        this.socket = io.connect('http://3.235.156.161:5000');
 
         if (this.userEmail){
             this.connectionHandler();
