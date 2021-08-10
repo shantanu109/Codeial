@@ -52,7 +52,7 @@ const chatServer = require('http').Server(app);
 
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
 
-chatServer.listen(5000);
+// chatServer.listen(5000);
 
 console.log('Chat Server is listening on Port 5000');
 
@@ -73,7 +73,7 @@ if (env.name == 'development'){
 }
 
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:false}));
 
 app.use(cookieParser());
 
